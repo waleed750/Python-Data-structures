@@ -1,0 +1,14 @@
+Tree :
+CONTAINS THESE METHODS : 
+
+1- p.element()
+
+2- p.children(self)
+
+3- p.is_root(self)
+
+
+- p.iter()
+
+
+

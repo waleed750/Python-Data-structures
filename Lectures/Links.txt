@@ -1,0 +1,15 @@
+1- https://www.geeksforgeeks.org/array-implementation-of-queue-simple/
+
+2- https://devopedia.org/queue-data-structure
+
+3- https://www.geeksforgeeks.org/types-of-linked-list/
+
+4- https://www.geeksforgeeks.org/data-structures/linked-list/doubly-linked-list/
+
+
+5- https://www.educba.com/circular-linked-list-in-data-structure/
+
+
+6- https://www.geeksforgeeks.org/growable-array-based-stack/
+
+7- https://www.geeksforgeeks.org/implement-a-stack-using-singly-linked-list/
