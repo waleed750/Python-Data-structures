@@ -18,7 +18,7 @@ Welcome to the repository that contains lectures and implementations for the Com
 
 1. **Clone the Repository**:
     ```bash
-    git clone https://github.com/waleed750/Python-Data-structures.git
+    git clone [https://github.com/waleed750/Python-Data-structures.git](Python Data Structures)
     ```
 
 2. **Navigate to the Directory**:
