@@ -18,12 +18,12 @@ Welcome to the repository that contains lectures and implementations for the Com
 
 1. **Clone the Repository**:
     ```bash
-    git clone https://github.com/yourusername/your-repo-name.git
+    git clone https://github.com/waleed750/Python-Data-structures.git
     ```
 
 2. **Navigate to the Directory**:
     ```bash
-    cd your-repo-name
+    cd Python-Data-structures
     ```
 
 3. **Explore the Folders**:
