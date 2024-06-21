@@ -55,18 +55,18 @@ class DoubleLinkedStack(_DoubleLinkedBase):
             print(current._element)
             current = current._prev
 
-    
-ds = DoubleLinkedStack()
-d10 = ds.push(10)
-d20 = ds.push(20)
-d30 = ds.push(30)
-print(f"Top : {ds.top()}")
-print(f"Size : {ds.len()}")
-ds.display()
-ds.pop()
-print(f"Top : {ds.top()}")
-print(f"Size : {ds.len()}")
-ds.display()
+#! __testing 
+# ds = DoubleLinkedStack()
+# d10 = ds.push(10)
+# d20 = ds.push(20)
+# d30 = ds.push(30)
+# print(f"Top : {ds.top()}")
+# print(f"Size : {ds.len()}")
+# ds.display()
+# ds.pop()
+# print(f"Top : {ds.top()}")
+# print(f"Size : {ds.len()}")
+# ds.display()
 
 class LinkedQueue(_DoubleLinkedBase):
     def first(self):
@@ -80,6 +80,7 @@ class LinkedQueue(_DoubleLinkedBase):
         while current._next:
             print(current._element)
             current = current._next
+#!__ Testing 
 # print(f"{"_"*20} Double Linked Queue {"_"*20}")
 # dq = LinkedQueue()
 # dq.enqueue(10)
@@ -93,4 +94,67 @@ class LinkedQueue(_DoubleLinkedBase):
 # print("First : ",dq.first())
 # print("Deleted : ",dq.dequeue())
 # print(f"Size : {dq.len()}")
-dq.display()
+# dq.display()
+#! 7.5 
+
+#! 7.6
+class CircularQueue:
+    class _Node:
+        __slots__ = "_element", "_next"
+
+        def __init__(self, element, next):
+            self._element = element
+            self._next = next
+    def __init__(self):
+        self._tail = None
+        self._size = 0
+    def len(self):
+        return self._size
+    def is_empty(self):
+        return self._size == 0
+    def enqueue(self, e):
+        newest = self._Node(e, None)
+        if self.is_empty() :
+            newest._next = newest
+        else:
+            newest._next =self._tail._next
+            self._tail._next = newest
+        self._tail = newest
+        self._size += 1
+        return newest
+    def dequeue(self):
+        if self.is_empty():
+            raise EmptyError("Empty CircularQueue")
+        old = self._tail._next
+        if self._size == 1:
+            self._tail = None
+        else:
+            self._tail._next = old._next
+        self._size -= 1
+        return old._element
+    def first(self):
+        if self.is_empty():
+            raise EmptyError("Empty CircularQueue")
+        return self._tail._next._element
+    def display(self):
+        if self.is_empty():
+            raise EmptyError("Empty CircularQueue")
+        current = self._tail._next
+        while current != self._tail:
+            print(current._element)
+            current = current._next
+        print(current._element) # to print the tail element
+# c = CircularQueue()
+# c.enqueue("A")
+# c.enqueue("B")
+# c.enqueue("C")
+# print("First : ",c.first())
+# c.display()
+# print(f"Size : {c.len()}")
+# print("Deleted : ",c.dequeue())
+# print("First : ",c.first())
+# print("Deleted : ",c.dequeue())
+# print("First : ",c.first())
+# print("Deleted : ",c.dequeue())
+
+
