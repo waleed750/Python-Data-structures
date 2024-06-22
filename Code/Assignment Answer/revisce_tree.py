@@ -291,6 +291,7 @@ class LinkedBinaryTree(BinaryTree):
             else:
                 parent._right = child
         self._size -= 1
+        node._parent = node
         return node._element
 
     def attach(self, p, t1, t2):
@@ -391,9 +392,9 @@ class LinkedBinaryTree(BinaryTree):
             node_p._parent = parent_q
             node_q._parent = parent_p
 
-            # update children
-            node_p._left, node_q._left = node_q._left, node_p._left
-            node_p._right, node_q._right = node_q._right, node_p._right
+            # # update children
+            # node_p._left, node_q._left = node_q._left, node_p._left
+            # node_p._right, node_q._right = node_q._right, node_p._right
 
     #!__8.4__ should be added to Tree
 
@@ -475,7 +476,7 @@ print(f"Right of root is Leaf {T.is_leaf(l)}")
 print(f"left child of root : {ll.element()}")
 print(f"length : {T.len()}")
 
-old_root = T.replace(root, 1)
+old_root = T.replace(root, 100)
 root = T.root()
 print(f"Replaced root : {old_root}")
 print(f"New root : {root.element()}")
@@ -493,7 +494,7 @@ t2root = t2._add_root(11)
 t2._add_left(t2root, 22)
 t2._add_right(t2root, 33)
 T.attach(ll, t1, t2)
-
+print(f"Size of Sub tree : {T._subtree_size(ll)}")
 print(f"New Subtree of {ll.element()} ")
 print(f"parent Subtree of {T.parent(ll).element()} ")
 # print(f"left child -> {T.right(ll).element()}")
