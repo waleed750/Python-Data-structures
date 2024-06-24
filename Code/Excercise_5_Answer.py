@@ -68,7 +68,8 @@ def infix_to_postfix(expr):
     return "".join(postfix_expr)
 
 
-print(infix_to_postfix('(6-(2+3))*(3+8/2)+2'))
+# print(infix_to_postfix('(6-(2+3))*(3+8/2)+2'))
+print(infix_to_postfix("(8-((((3+2)*2)-4)/3))"))
 
 
 #! 5.B
