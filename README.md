@@ -1,4 +1,5 @@
 # 🎓 Computer Science Master Degree  in Python Data Structures
+![pythondatastructuresmin](https://github.com/waleed750/Python-Data-structures/assets/102048956/4406cf83-8409-4456-b1bb-3d543fedcf34)
 
 Welcome to the repository that contains lectures and implementations for the Computer Science Master Degree program, all in Python. This repository is a comprehensive collection of my studies, including assignments, code implementations, and additional resources that helped me understand complex data structures and algorithms.
 
